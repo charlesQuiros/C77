@@ -61,6 +61,28 @@ h2 {
   height: 100px;
   width: 100px;
 }
+
+a {
+  text-decoration: none;
+  color: var(--warm-muted);
+}
+
+a:link {
+  color: var(--warm-muted);
+}
+
+a:visited {
+  color: var(--gray);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:active {
+  color: var(--light-gray);
+}
+
 button {
   background-color: var(--accent);
   color: var(--darker);
@@ -68,4 +90,12 @@ button {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--light-gray);
+}
+
+button:active {
+  background-color: var(--gray);
 }
