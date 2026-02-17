@@ -8,13 +8,15 @@
   --light-gray: #eaefef;
   --gray: #bfc9d1;
   --dark-gray: #25343f;
+  --darker: #252525;
   --accent: #ff9b51;
+  --warm-muted: #d4a574;
   --font-size: 16px;
 }
 
 body {
-  background-color: var(--light-gray);
-  color: var(--dark-gray);
+  background-color: var(--darker);
+  color: var(--light-gray);
   font-size: var(--font-size);
   font-family: "consolas", sans-serif;
 }
@@ -31,20 +33,20 @@ h2 {
 }
 
 #p1 {
-  color: red;
+  color: var(--accent);
 }
 
 #p2 {
-  color: blue;
+  color: var(--gray);
 }
 
 #p3 {
-  color: green;
+  color: var(--warm-muted);
 }
 
 button {
   background-color: var(--accent);
-  color: var(--light-gray);
+  color: var(--darker);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
