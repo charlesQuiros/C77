@@ -1,14 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-gray: #eaefef;
+  --gray: #bfc9d1;
+  --dark-gray: #25343f;
+  --accent: #ff9b51;
+  --font-size: 16px;
+}
+
 body {
-  background-color: #f0f0f0;
-  color: #333;
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+  font-size: var(--font-size);
+  font-family: "consolas", sans-serif;
 }
 
 h1 {
-    font-size: 3em;
+  font-size: 5em;
+  font-family: "Funnel Display", "consolas", sans-serif;
+  font-weight: 500;
 }
 
 h2 {
-    font-size: 2em;
+  font-size: 3em;
+  font-weight: 400;
 }
 
 #p1 {
@@ -21,4 +40,13 @@ h2 {
 
 #p3 {
   color: green;
+}
+
+button {
+  background-color: var(--accent);
+  color: var(--light-gray);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
