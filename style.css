@@ -25,6 +25,7 @@ h1 {
   font-size: 5em;
   font-family: "Funnel Display", "consolas", sans-serif;
   font-weight: 500;
+  text-shadow: 4px 4px 5px var(--gray);
 }
 
 h2 {
@@ -46,7 +47,7 @@ h2 {
 
 #box1 {
   background-color: aqua;
-  border: 2px solid white;
+  border-radius: 5px;
   height: 300px;
   width: 300px;
   margin: 50px auto;
@@ -55,11 +56,23 @@ h2 {
   align-items: center;
 }
 
+#box1:hover {
+  box-shadow: 0px 5px 10px var(--gray);
+}
+
 #box2 {
   background-color: #d4a574;
-  border: 1px solid black;
+  border-radius: 5px;
   height: 100px;
   width: 100px;
+  animation: myFlip;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+#box2:hover {
+  box-shadow: 0px 2px 5px var(--dark-gray);
 }
 
 a {
@@ -94,8 +107,51 @@ button {
 
 button:hover {
   background-color: var(--light-gray);
+  box-shadow: 0px 5px 10px var(--gray);
 }
 
 button:active {
   background-color: var(--gray);
 }
+
+.fa-map {
+  color: aqua;
+}
+
+.fa-bus {
+  color: coral;
+}
+
+@keyframes iconBump {
+  from {
+    margin-bottom: 0%;
+  }
+  to {
+    margin-bottom: 100%;
+  }
+}
+
+@keyframes myRotate {
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+/* Single keyframes with multiple effects */
+@keyframes myFlip {
+  0% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+  50% {
+    opacity: 0;
+    transform: rotateX(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(360deg);
+  }
+}
+
+/* To run MULTIPLE animations on one element, use a comma in animation: */
+/* animation: myOpacity 2s, myRotate 1s infinite; */
