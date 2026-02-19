@@ -54,10 +54,12 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #box1:hover {
   box-shadow: 0px 5px 10px var(--gray);
+  transform: perspective(500px) rotateX(25deg) rotateY(15deg);
 }
 
 #box2 {
@@ -153,5 +155,21 @@ button:active {
   }
 }
 
-/* To run MULTIPLE animations on one element, use a comma in animation: */
-/* animation: myOpacity 2s, myRotate 1s infinite; */
+fieldset {
+  display: flex;
+  gap: 12px;
+  margin: 20px auto;
+  width: 80%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset input {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
